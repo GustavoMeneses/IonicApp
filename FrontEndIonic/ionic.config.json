@@ -1,0 +1,7 @@
+{
+  "name": "FrontEndIonic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
