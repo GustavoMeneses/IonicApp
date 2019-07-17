@@ -22,6 +22,23 @@ $router->group(['prefix' => '/api/pessoa'], function() use ($router){
   $router->delete('/{id}', 'PessoasController@destroy');
 });
 
+$router->get('/api/perfis', 'PerfisController@getAll');
+
+$router->group(['prefix' => '/api/perfil'], function() use ($router){
+  $router->get('/{id}', 'PerfisController@get');
+  $router->post('/', 'PerfisController@store');
+  $router->put('/{id}', 'PerfisController@update');
+  $router->delete('/{id}', 'PerfisController@destroy');
+});
+
+$router->get('/api/aplicativos', 'AplicativosController@getAll');
+
+$router->group(['prefix' => '/api/aplicativos'], function() use ($router){
+  $router->get('/{id}', 'AplicativosController@get');
+  $router->post('/', 'AplicativosController@store');
+  $router->put('/{id}', 'AplicativosController@update');
+  $router->delete('/{id}', 'AplicativosController@destroy');
+});
 /*
 $router->get('/', function () use ($router) {
     //return $router->app->version();
