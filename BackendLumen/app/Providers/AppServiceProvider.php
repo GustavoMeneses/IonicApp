@@ -19,5 +19,8 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
           'App\Repositories\PerfilRepositoryInterface', 'App\Repositories\PerfilRepositoryEloquent'
         );
+        $this->app->bind(
+          'App\Repositories\AplicativoRepositoryInterface', 'App\Repositories\AplicativoRepositoryEloquent'
+        );
     }
 }
