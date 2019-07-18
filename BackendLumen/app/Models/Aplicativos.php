@@ -16,6 +16,10 @@ class Aplicativos extends Model
 
     public $timestamps = false;
 
+    public function pessoasaplicativos()
+    {
+      return $this->belongsTo('App\Models\PessoasAplicativos','id_aplicativo','id_aplicativo');
+    }
 
 }
 

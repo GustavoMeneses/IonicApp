@@ -16,6 +16,11 @@ class Perfis extends Model
 
     public $timestamps = false;
 
+    public function perfispessoas()
+    {
+      return $this->belongsTo('App\Models\PerfisPessoas','id_perfil','id_perfil');
+    }
+
 
 }
 

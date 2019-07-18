@@ -23,6 +23,11 @@ class Pessoas extends Model
 
     public $timestamps = false;
 
+    public function perfispessoas()
+    {
+      return $this->belongsTo('App\Models\PerfisPessoas','id_pessoa','id_pessoa');
+    }
+
 
 }
 
