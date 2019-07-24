@@ -7,6 +7,8 @@ const routes: Routes = [
   { path: 'pessoas', loadChildren: './pages/pessoas/pessoas.module#PessoasPageModule' },
   { path: 'perfis', loadChildren: './pages/perfis/perfis.module#PerfisPageModule' },
   { path: 'aplicativos', loadChildren: './pages/aplicativos/aplicativos.module#AplicativosPageModule' },
+  { path: 'usuarios', loadChildren: './pages/usuarios/usuarios.module#UsuariosPageModule' },
+  { path: 'acessos', loadChildren: './pages/acessos/acessos.module#AcessosPageModule' },
 ];
 
 @NgModule({
