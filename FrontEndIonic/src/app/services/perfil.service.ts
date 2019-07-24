@@ -38,4 +38,12 @@ export class PerfilService {
     //console.log(json);
     return this.http.post(`${this.url}perfil`,json,httpOptions);
   }
+
+  getInfo(id){
+    return this.http.get(`${this.url}perfil/${id}`,httpOptions);
+  }
+
+  atualizar(json,id){
+    return this.http.put(`${this.url}perfil/${id}`,json,httpOptions);
+  }
 }

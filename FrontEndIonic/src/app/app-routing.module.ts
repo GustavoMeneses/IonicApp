@@ -9,6 +9,9 @@ const routes: Routes = [
   { path: 'aplicativos', loadChildren: './pages/aplicativos/aplicativos.module#AplicativosPageModule' },
   { path: 'usuarios', loadChildren: './pages/usuarios/usuarios.module#UsuariosPageModule' },
   { path: 'acessos', loadChildren: './pages/acessos/acessos.module#AcessosPageModule' },
+  { path: 'pessoas/:id', loadChildren: './pages/pessoas-update/pessoas-update.module#PessoasUpdatePageModule' },
+  { path: 'perfis/:id', loadChildren: './pages/perfis-update/perfis-update.module#PerfisUpdatePageModule' },
+  { path: 'aplicativos/:id', loadChildren: './pages/aplicativos-update/aplicativos-update.module#AplicativosUpdatePageModule' },
 ];
 
 @NgModule({

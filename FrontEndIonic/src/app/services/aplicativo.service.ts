@@ -38,4 +38,12 @@ export class AplicativoService {
     //console.log(json);
     return this.http.post(`${this.url}aplicativo`,json,httpOptions);
   }
+
+  getInfo(id){
+    return this.http.get(`${this.url}aplicativo/${id}`,httpOptions);
+  }
+
+  atualizar(json,id){
+    return this.http.put(`${this.url}aplicativo/${id}`,json,httpOptions);
+  }
 }

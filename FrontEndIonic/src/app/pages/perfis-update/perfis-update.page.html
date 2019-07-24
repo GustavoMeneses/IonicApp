@@ -1,15 +1,25 @@
-  <ion-header>
+<ion-header>
   <ion-toolbar color="danger">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Cadastro</ion-title>
+    <ion-title>Edição</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+<div *ngIf="information">
   <ion-item>
+    <ion-label position="fixed">Perfil</ion-label>
+    <ion-input clearInput [(ngModel)]="perfil" value="{{ information.perfil }}"></ion-input>
+  </ion-item>
+</div>
+
+  <ion-button expand="full" (click)="AtualizarPerfil()" [routerLink]="['/', 'perfis']">Atualizar</ion-button>
+
+
+  <!--<ion-item>
     <ion-label position="fixed">Nome</ion-label>
     <ion-input clearInput [(ngModel)]="nome"></ion-input>
   </ion-item>
@@ -31,11 +41,11 @@
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option color="secondary" [routerLink]="['/', 'aplicativos', item.id_aplicativo]">Atualizar</ion-item-option>
-        <ion-item-option color="danger" (click)="deletarAplicativo(item.id_aplicativo)">Deletar</ion-item-option>
+        <ion-item-option color="secondary">Update</ion-item-option>
+        <ion-item-option color="danger" (click)="deletarAplicativo(item.id_aplicativo)">Delete</ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
 
-  </ion-list>
+  </ion-list>-->
 
 </ion-content>

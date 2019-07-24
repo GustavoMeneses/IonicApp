@@ -55,8 +55,8 @@
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option color="secondary">Update</ion-item-option>
-        <ion-item-option color="danger" (click)="deletarPessoa(item.id_pessoa)">Delete</ion-item-option>
+        <ion-item-option color="secondary" [routerLink]="['/', 'pessoas', item.id_pessoa]">Atualizar</ion-item-option>
+        <ion-item-option color="danger" (click)="deletarPessoa(item.id_pessoa)">Deletar</ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
 

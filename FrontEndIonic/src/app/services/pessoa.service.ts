@@ -38,4 +38,12 @@ export class PessoaService {
     //console.log(json);
     return this.http.post(`${this.url}pessoa`,json,httpOptions);
   }
+
+  getInfo(id){
+    return this.http.get(`${this.url}pessoa/${id}`,httpOptions);
+  }
+
+  atualizar(json,id){
+    return this.http.put(`${this.url}pessoa/${id}`,json,httpOptions);
+  }
 }
