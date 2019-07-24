@@ -17,9 +17,9 @@ class Pessoas extends Model
         'rg'
     ];
 
-    protected $casts = [
+    /*protected $casts = [
       'dt_nascimento' => 'Timestamp'
-    ];
+    ];*/
 
     public $timestamps = false;
 

@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Pessoas;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -33,15 +35,20 @@ $router->group(['prefix' => '/api/perfil'], function() use ($router){
 
 $router->get('/api/aplicativos', 'AplicativosController@getAll');
 
-$router->group(['prefix' => '/api/aplicativos'], function() use ($router){
+$router->group(['prefix' => '/api/aplicativo'], function() use ($router){
   $router->get('/{id}', 'AplicativosController@get');
   $router->post('/', 'AplicativosController@store');
   $router->put('/{id}', 'AplicativosController@update');
   $router->delete('/{id}', 'AplicativosController@destroy');
 });
-/*
+
 $router->get('/', function () use ($router) {
-    //return $router->app->version();
-    return 'teste';
+    $pessoa = Pessoas::find(3);
+
+    if($pessoa->delete())
+    {
+      return 'deletado';
+    } else {
+      return 'deu ruim';
+    }
 });
-*/

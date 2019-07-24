@@ -119,9 +119,10 @@ class PessoaService
 
     try {
 
-      $pessoa = $this->pessoaRepository->delete($id);
+      $pessoa = $this->pessoaRepository->destroy($id);
 
-      return response()->json(null, Response::HTTP_OK);
+      //return response()->json(null, Response::HTTP_OK);
+      return response()->json($pessoa, Response::HTTP_OK);
 
     } catch (QueryException $exception){
 

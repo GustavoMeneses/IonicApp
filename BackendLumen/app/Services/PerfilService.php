@@ -119,7 +119,7 @@ class PerfilService
 
     try {
 
-      $perfil = $this->perfilRepository->delete($id);
+      $perfil = $this->perfilRepository->destroy($id);
 
       return response()->json(null, Response::HTTP_OK);
 

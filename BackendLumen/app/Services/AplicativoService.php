@@ -119,7 +119,7 @@ class AplicativoService
 
     try {
 
-      $aplicativo = $this->aplicativoRepository->delete($id);
+      $aplicativo = $this->aplicativoRepository->destroy($id);
 
       return response()->json(null, Response::HTTP_OK);
 

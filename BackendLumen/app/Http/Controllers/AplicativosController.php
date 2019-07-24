@@ -21,22 +21,22 @@ class AplicativosController extends Controller
 
     public function get($id){
 
-      return $this->aplicativoServico->get($id);
+      return $this->aplicativoService->get($id);
     }
 
     public function store(Request $request){
 
-      return $this->aplicativoServico->store($request);
+      return $this->aplicativoService->store($request);
     }
 
     public function update($id, Request $request){
 
-      return $this->aplicativoServico->update($id, $request);
+      return $this->aplicativoService->update($id, $request);
     }
 
     public function destroy($id){
 
-      return $this->aplicativoServico->destroy($id);
+      return $this->aplicativoService->destroy($id);
     }
     //
 }
