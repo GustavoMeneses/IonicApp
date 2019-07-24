@@ -42,6 +42,24 @@ $router->group(['prefix' => '/api/aplicativo'], function() use ($router){
   $router->delete('/{id}', 'AplicativosController@destroy');
 });
 
+$router->get('/api/usuarios', 'UsuariosController@getAll');
+
+$router->group(['prefix' => '/api/usuario'], function() use ($router){
+  $router->get('/{id}', 'UsuariosController@get');
+  $router->post('/', 'UsuariosController@store');
+  $router->put('/{id}', 'UsuariosController@update');
+  $router->delete('/{id}', 'UsuariosController@destroy');
+});
+
+$router->get('/api/acessos', 'AcessosController@getAll');
+
+$router->group(['prefix' => '/api/acesso'], function() use ($router){
+  $router->get('/{id}', 'AcessosController@get');
+  $router->post('/', 'AcessosController@store');
+  $router->put('/{id}', 'AcessosController@update');
+  $router->delete('/{id}', 'AcessosController@destroy');
+});
+
 $router->get('/', function () use ($router) {
     $pessoa = Pessoas::find(3);
 

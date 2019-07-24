@@ -22,5 +22,11 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
           'App\Repositories\AplicativoRepositoryInterface', 'App\Repositories\AplicativoRepositoryEloquent'
         );
+        $this->app->bind(
+          'App\Repositories\UsuarioRepositoryInterface', 'App\Repositories\UsuarioRepositoryEloquent'
+        );
+        $this->app->bind(
+          'App\Repositories\AcessoRepositoryInterface', 'App\Repositories\AcessoRepositoryEloquent'
+        );
     }
 }
