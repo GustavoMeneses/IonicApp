@@ -11,26 +11,24 @@
 
   <ion-item>
     <ion-label>Selecione a pessoa</ion-label>
-    <ion-select>
-      <ion-select-option value="">All</ion-select-option>
-      <ion-select-option value="movie">Movie</ion-select-option>
-      <ion-select-option value="series">Series</ion-select-option>
-      <ion-select-option value="episode">Episode</ion-select-option>
+    <ion-select [(ngModel)]="id_pessoa">
+      <ion-item *ngFor="let item of (results_pessoa | async)">
+        <ion-select-option value="{{ item.id_pessoa }}">{{ item.nome }}</ion-select-option>
+      </ion-item>
     </ion-select>
   </ion-item>
 
   <ion-item>
     <ion-label>Selecione o perfil</ion-label>
-    <ion-select>
-      <ion-select-option value="">All</ion-select-option>
-      <ion-select-option value="movie">Movie</ion-select-option>
-      <ion-select-option value="series">Series</ion-select-option>
-      <ion-select-option value="episode">Episode</ion-select-option>
+    <ion-select [(ngModel)]="id_perfil">
+      <ion-item *ngFor="let item of (results_perfil | async)">
+        <ion-select-option value="{{ item.id_perfil }}">{{ item.perfil }}</ion-select-option>
+      </ion-item>
     </ion-select>
   </ion-item>
 
-  <ion-button expand="full">Cadastrar Usuário</ion-button>
-  
+  <ion-button expand="full" (click)="CadastrarUsuario()">Cadastrar Usuário</ion-button>
+
 
   <!--<ion-item>
     <ion-label position="fixed">Nome</ion-label>

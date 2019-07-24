@@ -1,4 +1,6 @@
+import { UsuarioService } from 'src/app/services/usuario.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-usuarios',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuariosPage implements OnInit {
 
-  constructor() { }
+  results_pessoa: Observable<any>;
+  results_perfil: Observable<any>;
+  id_pessoa = '';
+  id_perfil = '';
+  json = '';
+
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
+
+    this.results_pessoa = this.usuarioService.getPessoas();
+    this.results_perfil = this.usuarioService.getPerfis();
+  }
+
+  CadastrarUsuario(){
+    this.json = JSON.stringify({
+      id_pessoa:this.id_pessoa,
+      id_perfil:this.id_perfil
+    })
+
+    this.usuarioService.cadastrar(this.json).subscribe();
   }
 
 }
