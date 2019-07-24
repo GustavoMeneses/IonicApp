@@ -10,12 +10,10 @@ class Acessos extends Model
 
     protected $primaryKey = 'id_acesso';
 
-    /*protected $fillable = [
-        'nome',
-        'cpf',
-        'dt_nascimento',
-        'rg'
-    ];*/
+    protected $fillable = [
+        'id_usuario',
+        'id_aplicativo'        
+    ];
 
     public $timestamps = false;
 

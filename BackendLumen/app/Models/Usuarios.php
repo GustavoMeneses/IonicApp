@@ -10,12 +10,10 @@ class Usuarios extends Model
 
     protected $primaryKey = 'id_usuario';
 
-    /*protected $fillable = [
-        'nome',
-        'cpf',
-        'dt_nascimento',
-        'rg'
-    ];*/
+    protected $fillable = [
+        'id_perfil',
+        'id_pessoa'        
+    ];
 
     public $timestamps = false;
 
