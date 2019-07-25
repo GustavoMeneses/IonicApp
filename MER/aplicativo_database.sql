@@ -62,3 +62,7 @@ FOREIGN KEY (id_usuario)
 REFERENCES Usuario (id_usuario)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION;
+
+INSERT INTO `Perfil`( `perfil`) VALUES ('Gestor');
+INSERT INTO `Perfil`( `perfil`) VALUES ('Usuário comum');
+INSERT INTO `Perfil`( `perfil`) VALUES ('Administrador');
