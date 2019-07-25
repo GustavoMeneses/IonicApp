@@ -8,7 +8,9 @@ Criação do banco de dados em MySQL sendo a database com o nome 'ionic'.
 
 ## Informações
 
-### Apos a clonagem do projeto para um diretório, executar os seguintes comandos:
+### Apos a clonagem do projeto para um diretório, seguir os seguintes passos:
+
+Configurar o arquivo .env da pasta BackendLumen, definindo o DB_USERNAME e o DB_PASSWORD para conexão com o banco de dados.
 
 Verificar se o serviço do MySQL está rodando.
 
