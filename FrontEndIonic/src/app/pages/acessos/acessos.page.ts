@@ -11,6 +11,7 @@ export class AcessosPage implements OnInit {
 
   results_usuario: Observable<any>;
   results_aplicativo: Observable<any>;
+  results: Observable<any>;
   id_usuario = '';
   id_aplicativo = '';
   json = '';
@@ -21,6 +22,11 @@ export class AcessosPage implements OnInit {
 
     this.results_usuario = this.acessoService.getUsuarios();
     this.results_aplicativo = this.acessoService.getAplicativos();
+    this.RecarregarInfo();
+  }
+
+  RecarregarInfo(){
+    this.results = this.acessoService.getAcessos();
   }
 
   CadastrarAcesso(){
@@ -30,6 +36,12 @@ export class AcessosPage implements OnInit {
     })
 
     this.acessoService.cadastrar(this.json).subscribe();
+    this.RecarregarInfo();
+  }
+
+  deletarAcesso(id){
+    this.acessoService.deletar(id).subscribe();
+    this.RecarregarInfo();
   }
 
 }

@@ -13,7 +13,7 @@
     <ion-label>Selecione o usuário</ion-label>
     <ion-select [(ngModel)]="id_usuario">
       <ion-item *ngFor="let item of (results_usuario | async)">
-        <ion-select-option value="{{ item.id_usuario }}">{{ item.id_perfil }} - {{ item.id_pessoa }}</ion-select-option>
+        <ion-select-option value="{{ item.id_usuario }}">{{ item.perfil }} - {{ item.nome }}</ion-select-option>
       </ion-item>
     </ion-select>
   </ion-item>
@@ -30,33 +30,27 @@
   <ion-button expand="full" (click)="CadastrarAcesso()">Cadastrar Acesso</ion-button>
 
 
-  <!--<ion-item>
-    <ion-label position="fixed">Nome</ion-label>
-    <ion-input clearInput [(ngModel)]="nome"></ion-input>
-  </ion-item>
-
-  <ion-button expand="full" (click)="CadastrarAplicativo()">Cadastrar Aplicativo</ion-button>
-
   <ion-list>
 
     <ion-list-header>
-      <ion-label>Aplicativos</ion-label>
+      <ion-label>Acessos</ion-label>
     </ion-list-header>
 
     <ion-item-sliding *ngFor="let item of (results | async)">
-
       <ion-item>
         <ion-label text-wrap>
-          <h2>{{ item.nome }}</h2>
+          <h3>Usuário: {{ item.nome }} - {{ item.perfil }}</h3>
+          <ion-text color="primary">
+            <p>Aplicativo: {{ item.aplicativo }} </p>
+          </ion-text>
         </ion-label>
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option color="secondary">Update</ion-item-option>
-        <ion-item-option color="danger" (click)="deletarAplicativo(item.id_aplicativo)">Delete</ion-item-option>
+        <ion-item-option color="danger" (click)="deletarAcesso(item.id_acesso)">Delete</ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
 
-  </ion-list>-->
+  </ion-list>
 
 </ion-content>

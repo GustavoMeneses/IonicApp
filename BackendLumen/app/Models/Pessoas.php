@@ -17,17 +17,12 @@ class Pessoas extends Model
         'rg'
     ];
 
-    /*protected $casts = [
-      'dt_nascimento' => 'Timestamp'
-    ];*/
-
     public $timestamps = false;
 
     public function perfispessoas()
     {
       return $this->belongsTo('App\Models\PerfisPessoas','id_pessoa','id_pessoa');
     }
-
 
 }
 

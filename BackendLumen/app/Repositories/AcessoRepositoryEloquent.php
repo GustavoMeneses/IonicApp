@@ -15,7 +15,7 @@ class AcessoRepositoryEloquent implements AcessoRepositoryInterface
   }
 
   public function getAll(){
-    return $this->model->all();
+    return $this->model->getAcessos();
   }
 
   public function get($id){

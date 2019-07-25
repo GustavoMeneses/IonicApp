@@ -39,8 +39,23 @@ export class AcessoService {
     );
   }
 
+  getAcessos(): Observable<any>{
+    return this.http.get(`${this.url}acessos`)
+    .pipe(
+      map(results => {
+        //console.log('RAW: ', results);
+        return results;
+      })
+    );
+  }
+
   cadastrar(json){
     //console.log(json);
     return this.http.post(`${this.url}acesso`,json,httpOptions);
+  }
+
+  deletar(id){
+    //console.log(httpOptions);
+    return this.http.delete(`${this.url}acesso/${id}`,httpOptions);
   }
 }

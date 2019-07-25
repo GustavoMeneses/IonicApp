@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Usuarios extends Model
 {
@@ -12,7 +13,7 @@ class Usuarios extends Model
 
     protected $fillable = [
         'id_perfil',
-        'id_pessoa'        
+        'id_pessoa'
     ];
 
     public $timestamps = false;
@@ -32,6 +33,16 @@ class Usuarios extends Model
       return $this->belongsTo('App\Models\Acessos','id_usuario','id_usuario');
     }
 
+    public function getUsuarios()
+    {
+      $valores = DB::table('Usuario')
+                    ->join('Perfil', 'Usuario.id_perfil', 'Perfil.id_perfil')
+                    ->join('Pessoa', 'Usuario.id_pessoa', 'Pessoa.id_pessoa')
+                    ->select('Usuario.id_usuario', 'Perfil.perfil', 'Pessoa.nome')
+                    ->get();
+
+      return $valores;
+    }
 
 }
 

@@ -95,7 +95,7 @@ class UsuarioService
 
       $usuario = $this->usuarioRepository->destroy($id);
 
-      return response()->json(null, Response::HTTP_OK);
+      return response()->json($usuario, Response::HTTP_OK);
 
     } catch (QueryException $exception){
 

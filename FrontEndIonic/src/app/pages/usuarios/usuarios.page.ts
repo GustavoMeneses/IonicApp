@@ -11,6 +11,7 @@ export class UsuariosPage implements OnInit {
 
   results_pessoa: Observable<any>;
   results_perfil: Observable<any>;
+  results: Observable<any>;
   id_pessoa = '';
   id_perfil = '';
   json = '';
@@ -21,6 +22,11 @@ export class UsuariosPage implements OnInit {
 
     this.results_pessoa = this.usuarioService.getPessoas();
     this.results_perfil = this.usuarioService.getPerfis();
+    this.RecarregarInfo();
+  }
+
+  RecarregarInfo(){
+    this.results = this.usuarioService.getUsuarios();
   }
 
   CadastrarUsuario(){
@@ -30,6 +36,12 @@ export class UsuariosPage implements OnInit {
     })
 
     this.usuarioService.cadastrar(this.json).subscribe();
+    this.RecarregarInfo();
+  }
+
+  deletarUsuario(id){
+    this.usuarioService.deletar(id).subscribe();
+    this.RecarregarInfo();
   }
 
 }

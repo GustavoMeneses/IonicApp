@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Pessoas;
+use App\Models\Usuarios;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,15 +58,4 @@ $router->group(['prefix' => '/api/acesso'], function() use ($router){
   $router->post('/', 'AcessosController@store');
   $router->put('/{id}', 'AcessosController@update');
   $router->delete('/{id}', 'AcessosController@destroy');
-});
-
-$router->get('/', function () use ($router) {
-    $pessoa = Pessoas::find(3);
-
-    if($pessoa->delete())
-    {
-      return 'deletado';
-    } else {
-      return 'deu ruim';
-    }
 });

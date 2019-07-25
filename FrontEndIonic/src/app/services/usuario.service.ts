@@ -39,8 +39,23 @@ export class UsuarioService {
     );
   }
 
+  getUsuarios(): Observable<any>{
+    return this.http.get(`${this.url}usuarios`)
+    .pipe(
+      map(results => {
+        //console.log('RAW: ', results);
+        return results;
+      })
+    );
+  }
+
   cadastrar(json){
     //console.log(json);
     return this.http.post(`${this.url}usuario`,json,httpOptions);
+  }
+
+  deletar(id){
+    //console.log(httpOptions);
+    return this.http.delete(`${this.url}usuario/${id}`,httpOptions);
   }
 }

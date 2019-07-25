@@ -15,7 +15,7 @@ class UsuarioRepositoryEloquent implements UsuarioRepositoryInterface
   }
 
   public function getAll(){
-    return $this->model->all();
+    return $this->model->getUsuarios();
   }
 
   public function get($id){

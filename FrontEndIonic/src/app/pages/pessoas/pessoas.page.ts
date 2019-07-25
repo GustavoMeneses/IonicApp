@@ -17,14 +17,9 @@ export class PessoasPage implements OnInit {
   nascimento = '';
   json = '';
 
-  //constructor() { }
   constructor(private pessoaService: PessoaService) { }
 
   ngOnInit() {
-    // this.pessoaService.getPessoas().subscribe( result => {
-    //  console.log('details: ', result);
-    //   this.information = result;
-    // });
     this.results = this.pessoaService.getPessoas();
   }
 
