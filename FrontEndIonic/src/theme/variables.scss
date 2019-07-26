@@ -4,32 +4,51 @@
 /** Ionic CSS Variables **/
 :root {
 
-  --ion-background-color: #4B182C;
-  --ion-text-color: #ffffff;
+  // --ion-background-color: #4B182C;
+  --ion-background-color: #50BCAD;
+  //--ion-text-color: #ffffff;
 
   /** button **/
-  --ion-color-button: #A17B34;
-  --ion-color-button-rgb: 161,123,52;
-  --ion-color-button-contrast: #ffffff;
-  --ion-color-button-contrast-rgb: 255,255,255;
-  --ion-color-button-shade: #8e6c2e;
-  --ion-color-button-tint: #aa8848;
+  // --ion-color-button: #A17B34;
+  // --ion-color-button-rgb: 161,123,52;
+  // --ion-color-button-contrast: #ffffff;
+  // --ion-color-button-contrast-rgb: 255,255,255;
+  // --ion-color-button-shade: #8e6c2e;
+  // --ion-color-button-tint: #aa8848;
+  --ion-color-button: #F8B732;
+  --ion-color-button-rgb: 248,183,50;
+  --ion-color-button-contrast: #000000;
+  --ion-color-button-contrast-rgb: 0,0,0;
+  --ion-color-button-shade: #daa12c;
+  --ion-color-button-tint: #f9be47;
 
   /** button-update **/
-  --ion-color-button-update: #6b4d17;
-  --ion-color-button-update-rgb: 107,77,23;
-  --ion-color-button-update-contrast: #ffffff;
-  --ion-color-button-update-contrast-rgb: 255,255,255;
-  --ion-color-button-update-shade: #5e4414;
-  --ion-color-button-update-tint: #7a5f2e;
+  // --ion-color-button-update: #6b4d17;
+  // --ion-color-button-update-rgb: 107,77,23;
+  // --ion-color-button-update-contrast: #ffffff;
+  // --ion-color-button-update-contrast-rgb: 255,255,255;
+  // --ion-color-button-update-shade: #5e4414;
+  // --ion-color-button-update-tint: #7a5f2e;
+  --ion-color-button-update: #DEDDE4;
+  --ion-color-button-update-rgb: 222,221,228;
+  --ion-color-button-update-contrast: #000000;
+  --ion-color-button-update-contrast-rgb: 0,0,0;
+  --ion-color-button-update-shade: #c3c2c9;
+  --ion-color-button-update-tint: #e1e0e7;
 
   /** header **/
-  --ion-color-header: #8B394A;
-  --ion-color-header-rgb: 139,57,74;
+  // --ion-color-header: #8B394A;
+  // --ion-color-header-rgb: 139,57,74;
+  // --ion-color-header-contrast: #ffffff;
+  // --ion-color-header-contrast-rgb: 255,255,255;
+  // --ion-color-header-shade: #7a3241;
+  // --ion-color-header-tint: #974d5c;
+  --ion-color-header: #F04730;
+  --ion-color-header-rgb: 240,71,48;
   --ion-color-header-contrast: #ffffff;
   --ion-color-header-contrast-rgb: 255,255,255;
-  --ion-color-header-shade: #7a3241;
-  --ion-color-header-tint: #974d5c;
+  --ion-color-header-shade: #d33e2a;
+  --ion-color-header-tint: #f25945;
 
   /** primary **/
   --ion-color-primary: #3880ff;
@@ -104,6 +123,15 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
+// .ion-color-header {
+//   --ion-color-base: var(--ion-color-header);
+//   --ion-color-base-rgb: var(--ion-color-header-rgb);
+//   --ion-color-contrast: var(--ion-color-header-contrast);
+//   --ion-color-contrast-rgb: var(--ion-color-header-contrast-rgb);
+//   --ion-color-shade: var(--ion-color-header-shade);
+//   --ion-color-tint: var(--ion-color-header-tint);
+// }
+
 .ion-color-header {
   --ion-color-base: var(--ion-color-header);
   --ion-color-base-rgb: var(--ion-color-header-rgb);
@@ -113,6 +141,15 @@
   --ion-color-tint: var(--ion-color-header-tint);
 }
 
+// .ion-color-button {
+//   --ion-color-base: var(--ion-color-button);
+//   --ion-color-base-rgb: var(--ion-color-button-rgb);
+//   --ion-color-contrast: var(--ion-color-button-contrast);
+//   --ion-color-contrast-rgb: var(--ion-color-button-contrast-rgb);
+//   --ion-color-shade: var(--ion-color-button-shade);
+//   --ion-color-tint: var(--ion-color-button-tint);
+// }
+
 .ion-color-button {
   --ion-color-base: var(--ion-color-button);
   --ion-color-base-rgb: var(--ion-color-button-rgb);
@@ -121,6 +158,15 @@
   --ion-color-shade: var(--ion-color-button-shade);
   --ion-color-tint: var(--ion-color-button-tint);
 }
+
+// .ion-color-button-update {
+//   --ion-color-base: var(--ion-color-button-update);
+//   --ion-color-base-rgb: var(--ion-color-button-update-rgb);
+//   --ion-color-contrast: var(--ion-color-button-update-contrast);
+//   --ion-color-contrast-rgb: var(--ion-color-button-update-contrast-rgb);
+//   --ion-color-shade: var(--ion-color-button-update-shade);
+//   --ion-color-tint: var(--ion-color-button-update-tint);
+// }
 
 .ion-color-button-update {
   --ion-color-base: var(--ion-color-button-update);
