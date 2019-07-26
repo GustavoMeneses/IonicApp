@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="danger">
+  <ion-toolbar color="header">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
@@ -14,7 +14,7 @@
     <ion-input clearInput [(ngModel)]="perfil"></ion-input>
   </ion-item>
 
-  <ion-button expand="full" (click)="CadastrarPerfil()">Cadastrar Perfil</ion-button>
+  <ion-button expand="full" color="button" (click)="CadastrarPerfil()">Cadastrar Perfil</ion-button>
 
   <ion-list>
 
@@ -31,7 +31,7 @@
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option color="secondary" [routerLink]="['/', 'perfis', item.id_perfil]">Atualizar</ion-item-option>
+        <ion-item-option color="button-update" [routerLink]="['/', 'perfis', item.id_perfil]">Atualizar</ion-item-option>
         <ion-item-option color="danger" (click)="deletarPerfil(item.id_perfil)">Deletar</ion-item-option>
       </ion-item-options>
     </ion-item-sliding>

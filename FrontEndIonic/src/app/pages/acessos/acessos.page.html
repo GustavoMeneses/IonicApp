@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="danger">
+  <ion-toolbar color="header">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
@@ -27,7 +27,7 @@
     </ion-select>
   </ion-item>
 
-  <ion-button expand="full" (click)="CadastrarAcesso()">Cadastrar Acesso</ion-button>
+  <ion-button expand="full" color="button" (click)="CadastrarAcesso()">Cadastrar Acesso</ion-button>
 
 
   <ion-list>
@@ -40,7 +40,7 @@
       <ion-item>
         <ion-label text-wrap>
           <h3>Usuário: {{ item.nome }} - {{ item.perfil }}</h3>
-          <ion-text color="primary">
+          <ion-text>
             <p>Aplicativo: {{ item.aplicativo }} </p>
           </ion-text>
         </ion-label>

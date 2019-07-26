@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="danger">
+  <ion-toolbar color="header">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
@@ -27,7 +27,7 @@
     </ion-select>
   </ion-item>
 
-  <ion-button expand="full" (click)="CadastrarUsuario()">Cadastrar Usuário</ion-button>
+  <ion-button expand="full" color="button" (click)="CadastrarUsuario()">Cadastrar Usuário</ion-button>
 
   <ion-list>
 
@@ -39,7 +39,7 @@
       <ion-item>
         <ion-label text-wrap>
           <h3>Nome: {{ item.nome }}</h3>
-          <ion-text color="primary">
+          <ion-text>
             <p>Perfil: {{ item.perfil }} </p>
           </ion-text>
         </ion-label>

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="danger">
+  <ion-toolbar color="header">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
@@ -29,7 +29,7 @@
     <ion-input clearInput placeholder="YYYY-mm-dd" [(ngModel)]="nascimento"></ion-input>
   </ion-item>
 
-  <ion-button expand="full" (click)="CadastrarPessoa()">Cadastrar Pessoa</ion-button>
+  <ion-button expand="full" color="button" (click)="CadastrarPessoa()">Cadastrar Pessoa</ion-button>
 
   <ion-list>
 
@@ -42,20 +42,20 @@
       <ion-item>
         <ion-label text-wrap>
           <h3>Nome: {{ item.nome }}</h3>
-          <ion-text color="primary">
+          <ion-text>
             <p>CPF: {{ item.cpf }} </p>
           </ion-text>
-          <ion-text color="primary">
+          <ion-text>
             <p>RG: {{ item.rg }}</p>
           </ion-text>
-          <ion-text color="primary">
+          <ion-text>
             <p>Nascimento: {{ item.dt_nascimento | date: 'dd/MM/yyyy' }}</p>
           </ion-text>
         </ion-label>
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option color="secondary" [routerLink]="['/', 'pessoas', item.id_pessoa]">Atualizar</ion-item-option>
+        <ion-item-option color="button-update" [routerLink]="['/', 'pessoas', item.id_pessoa]">Atualizar</ion-item-option>
         <ion-item-option color="danger" (click)="deletarPessoa(item.id_pessoa)">Deletar</ion-item-option>
       </ion-item-options>
     </ion-item-sliding>

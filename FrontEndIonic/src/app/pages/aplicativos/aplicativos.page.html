@@ -1,5 +1,5 @@
   <ion-header>
-  <ion-toolbar color="danger">
+  <ion-toolbar color="header">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
@@ -14,7 +14,7 @@
     <ion-input clearInput [(ngModel)]="nome"></ion-input>
   </ion-item>
 
-  <ion-button expand="full" (click)="CadastrarAplicativo()">Cadastrar Aplicativo</ion-button>
+  <ion-button expand="full" color="button" (click)="CadastrarAplicativo()">Cadastrar Aplicativo</ion-button>
 
   <ion-list>
 
@@ -31,7 +31,7 @@
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option color="secondary" [routerLink]="['/', 'aplicativos', item.id_aplicativo]">Atualizar</ion-item-option>
+        <ion-item-option color="button-update" [routerLink]="['/', 'aplicativos', item.id_aplicativo]">Atualizar</ion-item-option>
         <ion-item-option color="danger" (click)="deletarAplicativo(item.id_aplicativo)">Deletar</ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
