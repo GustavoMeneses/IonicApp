@@ -50,7 +50,7 @@ Iniciar o simulador do ionic (chromium ou chrome)
 ionic serve --browser=<chromium|chrome>
 ```
 
-## Funcionalidade
+## Funcionalidades
 
 Para acessar as opções de atualização de deleção de registro, deslizar o mesmo para a esquerda.
 
