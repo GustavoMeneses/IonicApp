@@ -1,6 +1,7 @@
 import { AplicativoService } from 'src/app/services/aplicativo.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-aplicativos-update',
@@ -14,7 +15,7 @@ export class AplicativosUpdatePage implements OnInit {
   id = '';
   json = '';
 
-  constructor(private activatedRoute: ActivatedRoute, private aplicativoService: AplicativoService) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private aplicativoService: AplicativoService) { }
 
   ngOnInit() {
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
@@ -31,6 +32,7 @@ export class AplicativosUpdatePage implements OnInit {
     })
     //console.log(this.json);
     this.aplicativoService.atualizar(this.json,this.id).subscribe();
+    this.router.navigate(['/', 'aplicativos']);
   }
 
 }

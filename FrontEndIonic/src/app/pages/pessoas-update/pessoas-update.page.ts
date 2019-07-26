@@ -1,6 +1,7 @@
 import { PessoaService } from 'src/app/services/pessoa.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pessoas-update',
@@ -17,7 +18,7 @@ export class PessoasUpdatePage implements OnInit {
   id = '';
   json = '';
 
-  constructor(private activatedRoute: ActivatedRoute, private pessoaService: PessoaService) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private pessoaService: PessoaService) { }
 
   ngOnInit() {
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
@@ -40,7 +41,7 @@ export class PessoasUpdatePage implements OnInit {
     })
     //console.log(this.json);
     this.pessoaService.atualizar(this.json,this.id).subscribe();
-    this.activatedRoute.navigate(['/', 'pessoas']);
+    this.router.navigate(['/', 'pessoas']);
   }
 
 }

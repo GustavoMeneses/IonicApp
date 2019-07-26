@@ -1,6 +1,7 @@
 import { PerfilService } from 'src/app/services/perfil.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfis-update',
@@ -14,7 +15,7 @@ export class PerfisUpdatePage implements OnInit {
   id = '';
   json = '';
 
-  constructor(private activatedRoute: ActivatedRoute, private perfilService: PerfilService) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private perfilService: PerfilService) { }
 
   ngOnInit() {
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
@@ -31,6 +32,7 @@ export class PerfisUpdatePage implements OnInit {
     })
     //console.log(this.json);
     this.perfilService.atualizar(this.json,this.id).subscribe();
+    this.router.navigate(['/', 'perfis']);
   }
 
 }
