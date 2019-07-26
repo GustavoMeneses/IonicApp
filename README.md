@@ -52,6 +52,6 @@ ionic serve --browser=<chromium|chrome>
 
 ## Funcionalidades
 
-Para acessar as opções de atualização de deleção de registro, deslizar o mesmo para a esquerda.
+Para acessar as opções de atualização e deleção de registro, deslizar o mesmo para a esquerda.
 
 ![slide](Info/slide_function.png)
