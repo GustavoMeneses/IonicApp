@@ -40,6 +40,7 @@ export class PessoasUpdatePage implements OnInit {
     })
     //console.log(this.json);
     this.pessoaService.atualizar(this.json,this.id).subscribe();
+    this.activatedRoute.navigate(['/', 'pessoas']);
   }
 
 }
